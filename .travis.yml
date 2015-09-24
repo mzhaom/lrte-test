@@ -1,0 +1,27 @@
+# Use container based environment, slightly faster than standard
+sudo: false
+
+# language: cpp
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - wget
+      - gcc-4.8
+      - g++-4.8
+      # Package list from http://bazel.io/docs/install.html
+      - oraclejdk8
+      - zip
+      - zlib1g-dev
+
+install:
+  - ./install-bazel.sh
+
+script:
+  # The kernel used by travis is too old to allow namespace creation
+  # for normal account, so we disable it.
+  - sudo ls
+
+notifications:
+  email: false
