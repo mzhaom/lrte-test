@@ -1,5 +1,5 @@
-# Use container based environment, slightly faster than standard
-sudo: false
+# We need sudo to install lrte packages.
+sudo: true
 
 # language: cpp
 addons:
@@ -18,11 +18,10 @@ addons:
 
 install:
   - ./install-bazel.sh
+  - ./install-lrte.sh
 
 script:
-  # The kernel used by travis is too old to allow namespace creation
-  # for normal account, so we disable it.
-  - sudo ls
+  - ls  /usr/crosstool/v2/
 
 notifications:
   email: false
