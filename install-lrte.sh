@@ -1,6 +1,6 @@
 RELEASE=v2.0_0
 for name in runtime headers; do
-    local package=lrtev2-${name}_1.0-0_amd64.deb
+    package=lrtev2-${name}_1.0-0_amd64.deb
     wget https://github.com/mzhaom/lrte/releases/download/${RELEASE}/${package}
     sudo dpkg -i ${package}
 done
