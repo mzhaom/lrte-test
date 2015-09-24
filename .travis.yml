@@ -11,7 +11,8 @@ addons:
       - gcc-4.8
       - g++-4.8
       # Package list from http://bazel.io/docs/install.html
-      - oraclejdk8
+      - openjdk-7-jdk
+      - openjdk-7-source
       - zip
       - zlib1g-dev
 
