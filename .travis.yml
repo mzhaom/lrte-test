@@ -1,4 +1,4 @@
-# We need sudo to install lrte packages.
+ # We need sudo to install lrte packages.
 sudo: true
 
 # language: cpp
@@ -8,8 +8,6 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - wget
-      - gcc-4.8
-      - g++-4.8
       # Package list from http://bazel.io/docs/install.html
       - openjdk-7-jdk
       - openjdk-7-source
@@ -21,7 +19,7 @@ install:
   - ./install-lrte.sh
 
 script:
-  - ls  /usr/crosstool/v2/
+  - make all
 
 notifications:
   email: false
