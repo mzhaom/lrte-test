@@ -3,6 +3,8 @@ CLANG=$(TOP)/x86/bin/clang++
 GXX=$(TOP)/x86/bin/g++
 
 all: hello-g hello-clang
+	readelf -l ./hello-g
+	readelf -l ./hello-clang
 	./hello-g
 	./hello-clang
 
