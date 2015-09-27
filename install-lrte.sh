@@ -5,8 +5,8 @@ for name in runtime headers; do
     sudo dpkg -i ${package}
 done
 
-GCC=lrtev2-crosstoolv2-gcc-4.9_1.0-8.223995svn_amd64.deb
-CLANG=lrtev2-crosstoolv2-clang-3.7_1.0-8.238804svn_amd64.deb
+GCC=lrtev2-crosstoolv2-gcc-4.9_1.0-8.228158svn_amd64.deb
+CLANG=lrtev2-crosstoolv2-clang-3.7_1.0-8.248635svn_amd64.deb
 for package in $GCC $CLANG; do
     wget https://github.com/mzhaom/lrte/releases/download/${RELEASE}/${package}
     sudo dpkg -i ${package}
